@@ -23,6 +23,7 @@ samples/output
 
 # direnv
 .envrc
+.pytest_venv
 
 # IDE cruft
 .idea
