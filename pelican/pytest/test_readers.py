@@ -1,6 +1,6 @@
 import pytest
-from ..readers import HTMLReader
-from ..settings import DEFAULT_CONFIG
+from pelican.readers import HTMLReader
+from pelican.settings import DEFAULT_CONFIG
 
 
 build_tag_data = [

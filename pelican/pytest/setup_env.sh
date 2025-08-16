@@ -6,12 +6,12 @@ if [ ! -d .pytest_venv ]; then
     pip3 install pytest-html
     pip3 install pelican
 else
-    echo "\n"
+    echo ""
     echo "VENV already exists"
 fi
 
-echo "\n"
+echo ""
 echo "-------------------------------------------"
 echo "Start Env: source .pytest_venv/bin/activate"
 echo "-------------------------------------------"
-echo "\n"
+echo ""

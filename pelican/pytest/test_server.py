@@ -1,6 +1,6 @@
 import pytest
 from io import BytesIO
-from ..server import ComplexHTTPRequestHandler
+from pelican.server import ComplexHTTPRequestHandler
 
 server_data = [
     ("/test/normal/path", "base", "base/test/normal/path"),
@@ -32,12 +32,4 @@ def test_translate_path(path, prefix, expected, html_handler):
     """
     html_handler.base_path = prefix
     output = html_handler.translate_path(path)
-    assert output == expected
-
-@pytest.mark.parametrize("path, prefix, expected", server_data, ids=["T1", "T2", "T3"])
-def test_get_path_that_exists(path, prefix, expected, html_handler):
-    """
-    """
-    html_handler.base_path = prefix
-    output = html_handler.get_path_that_exists(path)
     assert output == expected

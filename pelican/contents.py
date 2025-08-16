@@ -398,9 +398,7 @@ class Content:
     def get_static_links(self) -> set[str]:
         static_links = set()
         hrefs = self._get_intrasite_link_regex()
-        import pdb; pdb.set_trace()
         for m in hrefs.finditer(self._content):
-            import pdb; pdb.set_trace()
             what = m.group("what")
             value = urlparse(m.group("value"))
             path = value.path
